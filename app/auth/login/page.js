@@ -3,17 +3,23 @@
 import Constants from "@/constants/Constants";
 import AuthTitle from "@/components/Auth/AuthTitle";
 import Input from "@/components/UIElements/Input";
+import axios from "axios";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const LogIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onLogIn = () => {
-    console.log({
-      email: email,
-      password: password
-    })
+  const onLogIn = async () => {
+    try {
+      const response = await axios.post("/api/user", { email, password });
+      // const { token } = response;
+      toast.success(response.statusText);
+    } catch(error) {
+      const errorText = error.response?.statusText || "Error";
+      toast.error(errorText);
+    }
   }
 
   return (
