@@ -1,0 +1,32 @@
+const Constants = {
+  boethos: "Boethos",
+  createAccount: "Create Account",
+  deleteAccount: "Delete Account",
+  signUp: "Sign Up",
+  clickHere: "Click here",
+  verify: "Verify",
+  verifyEmail: "Verify Email",
+  email: "Email",
+  password: "Password",
+  resend: "Resend",
+  logIn: "Log In",
+  logOut: "Log Out",
+  changePassword: "Change Password",
+  reset: "Reset",
+  oldPassword: "Old Password",
+  newPassword: "New Password",
+  mySheets: "My Sheets",
+  firstName: "First Name",
+  lastName: "Last Name",
+  code: "Code",
+  resetPassword: "Reset Password",
+  change: "Change",
+  toggleDarkMode: "Toggle Dark Mode",
+  settings: "Settings",
+  search: "Search",
+  delete: "Delete",
+  markSeen: "Mark Seen",
+  history: "History"
+}
+
+export default Constants;

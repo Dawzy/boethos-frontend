@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.settings-btn {
+  @apply
+  h-12
+  w-full
+  rounded-lg
+  border-2
+  font-[600]
+  px-4
+  py-2
+  m-1
+}
+
+.del {
+  @apply
+  text-[#940000]
+  bg-[#FF9F9F]
+  border-[#940000]
+}
+
+.btn {
+  @apply
+  h-12
+  w-full
+  rounded-xl
+  border-2
+  font-[600]
+  px-4
+  py-2
+  m-1
+}
+
+.navmenu-btn {
+  @apply
+  w-full
+  text-[24px]
+  border-b-2
+  my-3
+  select-none
+}
