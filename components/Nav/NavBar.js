@@ -3,12 +3,11 @@ import { TiThMenu } from "react-icons/ti";
 import { GrClose } from "react-icons/gr";
 import { useContext, useEffect, useState } from "react";
 import AppContext from "@/contexts/AppContext";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { BsMoonFill, BsFillSunFill } from "react-icons/bs";
 import { BiSolidHomeAlt2 } from "react-icons/bi";
 import { MdKeyboardBackspace } from "react-icons/md";
-import { useRouter } from "next/navigation";
 
 const NavBar = ({ navMenuVisible, setNavMenu }) => {
   const router = useRouter();
@@ -24,12 +23,12 @@ const NavBar = ({ navMenuVisible, setNavMenu }) => {
     if (pathTokens.length > 0) {
       switch (pathTokens[0]) {
         case "sheets":
-          if (pathTokens.length > 1) {
-            const sheetName = sheets.find(item => item.id == pathTokens.at(-1)).name;
-            setTitle(`${sheetName} - Sheet`);
-          } else {
+          // if (pathTokens.length > 1) {
+          //   const sheetName = sheets.find(item => item.id == pathTokens.at(-1)).name;
+          //   setTitle(`${sheetName} - Sheet`);
+          // } else {
             setTitle("Sheets");
-          }
+          // }
 
           break;
         case "settings":
@@ -56,7 +55,7 @@ const NavBar = ({ navMenuVisible, setNavMenu }) => {
       </div>
 
       <div className="flex flex-row-reverse items-center">
-        <button className="scale-150 ml-1" onClick={() => setNavMenu(prev => !prev)}>
+        <button className="scale-150 ml-1" onClick={() => {console.log("CLICKED"); setNavMenu(prev => !prev)}}>
           {navMenuVisible ? 
             <GrClose />
           :

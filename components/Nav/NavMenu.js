@@ -1,5 +1,7 @@
+"use client"
+
 import { motion } from "framer-motion";
-import NavMenuButton from "./NavMenuButton";
+import NavMenuButton from "./NavMenuButton.js";
 import { useRouter } from "next/navigation";
 import Constants from "@/constants/Constants";
 

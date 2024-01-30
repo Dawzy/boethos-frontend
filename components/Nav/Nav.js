@@ -1,7 +1,7 @@
 "use client"
 
-import NavBar from "@/Components/Nav/NavBar";
-import NavMenu from "@/Components/Nav/NavMenu";
+import NavBar from "@/Components/Nav/NavBar.js";
+import NavMenu from "@/Components/Nav/NavMenu.js";
 import { useState } from "react";
 
 const Nav = () => {
