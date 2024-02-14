@@ -2,32 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Poppins', sans-serif;
+  @apply
+  bg-light-main
+  dark:bg-dark-main
+
+  text-dark-main
+  dark:text-light-main
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.settings-btn {
+  @apply
+  h-12
+  w-full
+  rounded-lg
+  bordered
+  font-[600]
+  px-4
+  py-2
+  m-1
+}
+
+.del {
+  @apply
+  !text-cancel-main
+  !bg-cancel-complement
+  !border-cancel-main
+}
+
+.btn {
+  @apply
+  h-12
+  w-full
+  rounded-xl
+  bordered
+  font-[600]
+  px-4
+  py-2
+  m-1
+}
+
+.navmenu-btn {
+  @apply
+  w-full
+  text-[24px]
+  bordered
+  !border-x-0
+  !border-t-0
+  my-3
+  select-none
+}
+
+.bordered {
+  @apply
+  border-2
+  dark:border-dark-border
 }
