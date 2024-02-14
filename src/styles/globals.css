@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  @apply
+  bg-light-main
+  dark:bg-dark-main
+
+  text-dark-main
+  dark:text-light-main
+}
+
+.settings-btn {
+  @apply
+  h-12
+  w-full
+  rounded-lg
+  bordered
+  font-[600]
+  px-4
+  py-2
+  m-1
+}
+
+.del {
+  @apply
+  !text-cancel-main
+  !bg-cancel-complement
+  !border-cancel-main
+}
+
+.btn {
+  @apply
+  h-12
+  w-full
+  rounded-xl
+  bordered
+  font-[600]
+  px-4
+  py-2
+  m-1
+}
+
+.navmenu-btn {
+  @apply
+  w-full
+  text-[24px]
+  bordered
+  !border-x-0
+  !border-t-0
+  my-3
+  select-none
+}
+
+.bordered {
+  @apply
+  border-2
+  dark:border-dark-border
+}
